@@ -1,0 +1,149 @@
+frontend/
+├── app/
+│   ├── (auth)/
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   ├── signup/
+│   │   │   └── page.tsx
+│   │   └── layout.tsx
+│   ├── (dashboard)/
+│   │   ├── founder/
+│   │   │   ├── dashboard/
+│   │   │   │   └── page.tsx
+│   │   │   ├── profile/
+│   │   │   │   └── page.tsx
+│   │   │   ├── pitches/
+│   │   │   │   └── page.tsx
+│   │   │   ├── connections/
+│   │   │   │   └── page.tsx
+│   │   │   ├── verification/
+│   │   │   │   └── page.tsx
+│   │   │   └── subscription/
+│   │   │       └── page.tsx
+│   │   ├── investor/
+│   │   │   ├── dashboard/
+│   │   │   │   └── page.tsx
+│   │   │   ├── search/
+│   │   │   │   └── page.tsx
+│   │   │   ├── watchlist/
+│   │   │   │   └── page.tsx
+│   │   │   └── connections/
+│   │   │       └── page.tsx
+│   │   └── layout.tsx
+│   ├── admin/
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   ├── users/
+│   │   │   └── page.tsx
+│   │   ├── verifications/
+│   │   │   └── page.tsx
+│   │   ├── interviews/
+│   │   │   └── page.tsx
+│   │   ├── payments/
+│   │   │   └── page.tsx
+│   │   └── analytics/
+│   │       └── page.tsx
+│   ├── waitlist/
+│   │   └── page.tsx              # ✅ Waitlist page (ready)
+│   ├── spotlight/
+│   │   └── [id]/
+│   │       └── page.tsx
+│   ├── profile/
+│   │   └── [founderId]/
+│   │       └── page.tsx
+│   ├── layout.tsx                # Root layout with providers
+│   ├── page.tsx                  # Landing page
+│   └── globals.css
+│
+├── components/
+│   ├── common/
+│   │   ├── Layout/
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   └── Sidebar.tsx
+│   │   ├── UI/
+│   │   │   ├── Button.tsx
+│   │   │   ├── Input.tsx
+│   │   │   ├── Card.tsx
+│   │   │   ├── Badge.tsx
+│   │   │   ├── Avatar.tsx
+│   │   │   ├── Spinner.tsx
+│   │   │   └── Toast.tsx
+│   │   └── Forms/
+│   │       ├── FormInput.tsx
+│   │       ├── FormSelect.tsx
+│   │       └── FormTextarea.tsx
+│   ├── auth/
+│   │   ├── LoginForm.tsx
+│   │   ├── SignupForm.tsx
+│   │   └── RoleSelector.tsx
+│   ├── waitlist/                 # ✅ Waitlist components
+│   │   ├── WaitlistForm.tsx
+│   │   ├── WaitlistSuccess.tsx
+│   │   └── WaitlistFeatures.tsx
+│   ├── founder/
+│   │   ├── ProfileForm.tsx
+│   │   ├── PitchForm.tsx
+│   │   ├── VerificationUpload.tsx
+│   │   └── ConnectionRequests.tsx
+│   ├── investor/
+│   │   ├── SearchFilters.tsx
+│   │   ├── FounderCard.tsx
+│   │   └── ConnectionRequestModal.tsx
+│   └── admin/
+│       ├── UserTable.tsx
+│       ├── VerificationQueue.tsx
+│       ├── InterviewQueue.tsx
+│       └── StatsWidget.tsx
+│
+├── hooks/
+│   ├── useAuth.ts
+│   ├── useProfile.ts
+│   ├── useSearch.ts
+│   ├── useWaitlist.ts            # ✅ Waitlist hook
+│   └── useToast.ts
+│
+├── lib/
+│   ├── api/
+│   │   ├── client.ts             # Axios client with interceptors
+│   │   ├── endpoints.ts          # API endpoint constants
+│   │   └── types.ts              # API response types
+│   ├── validations/
+│   │   ├── auth.ts               # Login/Signup schemas
+│   │   ├── waitlist.ts           # ✅ Waitlist schema
+│   │   ├── profile.ts
+│   │   └── pitch.ts
+│   └── utils/
+│       ├── constants.ts
+│       ├── formatters.ts
+│       └── validators.ts
+│
+├── providers/
+│   ├── QueryProvider.tsx         # React Query
+│   ├── AuthProvider.tsx          # Auth context
+│   └── ToastProvider.tsx         # Toast notifications
+│
+├── types/
+│   ├── auth.ts
+│   ├── waitlist.ts               # ✅ Waitlist types
+│   ├── user.ts
+│   ├── profile.ts
+│   └── api.ts
+│
+├── styles/
+│   └── globals.css
+│
+├── public/
+│   ├── favicon.ico
+│   ├── logo.svg
+│   └── images/
+│
+├── .env.local
+├── .env.example
+├── .gitignore
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── next.config.js
+├── tsconfig.json
+└── README.md
